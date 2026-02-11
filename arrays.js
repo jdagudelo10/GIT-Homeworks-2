@@ -193,3 +193,4 @@ let resultados = numeros.some(num => num > 10);
 console.log(resultado);
 // true
 
+//-----------------------------
