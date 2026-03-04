@@ -1,0 +1,14 @@
+.comite {
+  background: #334322;
+  border: 1px solid #556644;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.comite h2 {
+  color: #cddc39;
+}
+
+.comite button {
+  margin: 0 0.25rem;
+}
