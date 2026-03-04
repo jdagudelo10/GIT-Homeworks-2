@@ -13,16 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Page-level gradient background */
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #2b2b2b 0%, #121212 100%);
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -35,7 +25,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -63,7 +54,63 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* player styles */
+.player {
+  background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  color: #fff;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
 
+.song-info {
+  text-align: center;
+}
+
+.song-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.artist-name {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin: 0;
+}
+
+.song-time {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 0.75rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+button.next,
+button.prev {
+  background: #646cff;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+button.next:hover,
+button.prev:hover {
+  background: #535bf2;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
