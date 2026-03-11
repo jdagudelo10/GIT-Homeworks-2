@@ -1,5 +1,3 @@
-
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,44 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* clinic layout helpers */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.card {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.3);
-}
-.card h2 {
-  margin-top: 0;
-}
-
-.waitlist-patients,
-.medico-turno,
-.comite {
-  width: 100%;
-}
-
-.history-nav {
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.list {
-  list-style: none;
-  padding-left: 0;
-}
-
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -62,20 +22,12 @@ a:hover {
   color: #535bf2;
 }
 
-
 body {
   margin: 0;
   display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--bg, #242424);
-}
-
-/* ensure container itself is centered in case flex parent is removed */
-.container {
-  margin: 0 auto;
 }
 
 h1 {
