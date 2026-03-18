@@ -1,9 +1,9 @@
-import BookSection from "./Components/BookSection";
+import Cajero from "./Components/Cajero";
 
 function App(){
     return (
         <>
-        <BookSection/>
+        <Cajero/>
         </>
     );
 }
