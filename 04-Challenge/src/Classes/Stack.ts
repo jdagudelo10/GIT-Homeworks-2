@@ -26,7 +26,7 @@ class Stack{
     }
 
     print(){
-        this.items.slice().reverse()
+        return this.items.slice().reverse()
     }
 
 

@@ -4,6 +4,7 @@ import ModalNewBook from "./ModalNewBook";
 import BookData from "../Data/BookData"
 import { useEffect, useState } from "react";
 import Stack from "../Classes/Stack";
+import "../Styles/BookSection.css";
 
 function BookSection(){
 
@@ -22,7 +23,7 @@ function BookSection(){
     }, []) // Added empty dependency array to run only once on mount
 
     const popBook = () => {
-        libros.pop;
+        libros.pop();
         setTrigger((prev) => prev+1)
     }
 
@@ -39,7 +40,7 @@ function BookSection(){
             <h1 className="stack-title">LIBROS DISPONIBLES</h1>
 
             <div className="book-Array">
-                {BookData.map((book)=><Card key={book.isbn} book={book}/>)}
+                {libros.print().map((book:Book)=><Card key={book.isbn} book={book}/>)}
             </div>
 
             <div className="actions">

@@ -1,4 +1,5 @@
 import Book from "../Classes/Book";
+import "../Styles/Card.css";
 
 interface CardProp{
     book:Book
