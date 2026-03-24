@@ -1,0 +1,173 @@
+.cajero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.cajero-container h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.cajero-container h2 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Formulario */
+.form-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Botones */
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+}
+
+/* Sección de transacciones */
+.transactions-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 40px 0;
+}
+
+/* Tabla de transacciones */
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.transactions-table thead {
+    background-color: #4CAF50;
+}
+
+.transactions-table th {
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 2px solid #45a049;
+}
+
+.transactions-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+.transactions-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.transactions-table td {
+    padding: 12px 15px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.transactions-table tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cajero-container {
+        padding: 15px;
+    }
+
+    .cajero-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .form-section,
+    .transactions-section {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group input {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .btn-add {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .transactions-table th,
+    .transactions-table td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
