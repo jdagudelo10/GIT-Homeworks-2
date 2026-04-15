@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
 import { NaryNode, type NaryNodeData, type NodeType } from '../classes/NaryNode';
 import { NaryTree } from '../classes/NaryTree';
 import { useAuth } from '../contexts/AuthContext';
+import { db } from '../firebase/config';
 import { useCollection } from './useCollection';
 
 type TreeDocument = {
@@ -80,20 +82,26 @@ export const useTreeCollection = () => {
     }, [user?.uid]);
 
     useEffect(() => {
-        if (!user || loading || data || treeReadyForUser === user.uid) {
+        if (!user || treeReadyForUser === user.uid) {
             return;
         }
 
         void (async () => {
             try {
-                await upsert(createRootTree(user.uid, user.email ?? 'sin-correo'));
+                const reference = doc(db, TREE_COLLECTION, user.uid);
+                const snapshot = await getDoc(reference);
+
+                if (!snapshot.exists()) {
+                    await upsert(createRootTree(user.uid, user.email ?? 'sin-correo'));
+                }
+
                 setTreeReadyForUser(user.uid);
             } catch (error) {
                 const message = error instanceof Error ? error.message : 'No se pudo inicializar el árbol.';
                 setInitialTreeError(message);
             }
         })();
-    }, [data, loading, treeReadyForUser, upsert, user]);
+    }, [treeReadyForUser, upsert, user]);
 
     const tree = useMemo(() => {
         if (!data) {
