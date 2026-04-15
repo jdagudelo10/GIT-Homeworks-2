@@ -1,0 +1,11 @@
+.App {
+  min-height: 100vh;
+}
+
+.App > :last-child {
+  flex: 1;
+}
+
+.not-found {
+  padding: 32px 20px;
+}

@@ -1,0 +1,44 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 18px;
+	padding: 16px clamp(18px, 4vw, 32px);
+	border-bottom: 2px solid var(--accent);
+	background: var(--surface);
+}
+
+.navbar h2 {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.navbar-options {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.navigation-link,
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 10px 14px;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.navigation-link {
+	color: var(--text-h);
+	border: 1px solid var(--border);
+	background: var(--surface-2);
+}
+
+.btn-danger {
+	border: none;
+	background: var(--secondary);
+	color: #fffdf9;
+}
