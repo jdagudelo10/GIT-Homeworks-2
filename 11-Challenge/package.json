@@ -1,5 +1,5 @@
 {
-  "name": "10-challenge",
+  "name": "11-challenge",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/react-d3-graph": "^2.6.7",
-    "d3": "^7.9.0",
     "react": "^19.2.5",
-    "react-d3-graph": "^2.6.0",
     "react-dom": "^19.2.5"
   },
   "devDependencies": {

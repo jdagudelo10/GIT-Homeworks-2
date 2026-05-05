@@ -1,0 +1,209 @@
+:root {
+  --primary-dark: #780000;
+  --primary-bright: #c1121f;
+  --bg-light: #fdf0d5;
+  --secondary-dark: #003049;
+  --secondary-light: #669bbc;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.search-bar__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.search-bar__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.search-bar__field {
+  position: relative;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 16px 18px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--secondary-dark);
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.search-bar__input::placeholder {
+  color: var(--secondary-light);
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-color: var(--primary-bright);
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(193, 18, 31, 0.25);
+}
+
+.search-bar__input:hover:not(:focus) {
+  border-color: var(--secondary-light);
+  box-shadow: 0 2px 16px rgba(102, 155, 188, 0.15);
+}
+
+.search-bar__results {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, #004361 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 28px;
+  min-height: 140px;
+  box-shadow: 0 8px 24px rgba(0, 48, 73, 0.25);
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-bar__title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--bg-light);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0 0 18px 0;
+  opacity: 0.9;
+}
+
+.search-bar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-bar__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: rgba(253, 240, 213, 0.95);
+  border-left: 5px solid var(--primary-bright);
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.search-bar__item:hover {
+  background-color: var(--bg-light);
+  box-shadow: 0 6px 16px rgba(193, 18, 31, 0.2);
+  transform: translateX(6px);
+  border-left-color: var(--primary-dark);
+}
+
+.search-bar__name {
+  font-weight: 700;
+  color: var(--secondary-dark);
+  font-size: 15px;
+  flex: 1;
+  letter-spacing: 0.3px;
+}
+
+.search-bar__popularity {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-bright));
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(120, 0, 0, 0.2);
+}
+
+.search-bar__empty {
+  text-align: center;
+  color: rgba(253, 240, 213, 0.8);
+  font-size: 15px;
+  margin: 0;
+  padding: 20px 0;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 24px 16px;
+  }
+
+  .search-bar__input {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .search-bar__results {
+    padding: 24px;
+  }
+
+  .search-bar__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-bar__popularity {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 20px 12px;
+  }
+
+  .search-bar__label {
+    font-size: 12px;
+  }
+
+  .search-bar__title {
+    font-size: 11px;
+  }
+
+  .search-bar__name {
+    font-size: 14px;
+  }
+
+  .search-bar__results {
+    padding: 20px;
+    min-height: 120px;
+  }
+
+  .search-bar__item {
+    padding: 12px 14px;
+  }
+}
